@@ -1,0 +1,93 @@
+/* Seccion hero Inicio */
+.hero {
+  padding: 30px 0 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--fg);
+  letter-spacing: -.02em;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  margin: 0 auto 24px;
+  max-width: 400px;
+}
+
+/* Cards */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.card {
+  border: 1px solid var(--ln);
+  background: var(--cd);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+/*  :hover es una pseudoclase de CSS que se activa cuando un elemento está siendo “hovered”, es decir, 
+    cuando el puntero del usuario está encima del elemento sin hacer clic. */
+.card:hover {
+  border-color: var(--ac);
+  transform: translateY(-1px);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--fg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title span {
+  color: var(--ac);
+  font-size: 14px;
+}
+
+/* Call to action */
+.cta-container {
+  margin-top: 32px;
+}
+
+.cta-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Botones */
+
+.btn {
+  margin-top: 14px;
+  width: 100%;
+  padding: 11px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--fg);
+  color: var(--bg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Tipografía de utilidad */
+.p-suave {
+  color: var(--mu);
+  font-size: 13px;
+}
