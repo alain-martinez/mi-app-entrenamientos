@@ -31,9 +31,10 @@ Soy estudiante de ingeniería con interés en especializarme en **ciberseguridad
 
 Aunque la idea inicial era desarrollar una aplicación **100 % *client-side***, finalmente se optó por incorporar un pequeño servidor backend dedicado exclusivamente a gestionar la lectura y escritura de datos en un archivo `.json` local. 
 
-Esta decisión responde a las siguientes necesidades del proyecto:
+Si bien el navegador permite escribir archivos directamente en el disco duro desde el cliente (mediante APIs como *File System Access*), este enfoque añade fricción innecesaria por las restricciones de seguridad y la gestión constante de permisos de escritura con el usuario. Delegar esta tarea a un backend ligero resuelve el problema y aporta las siguientes ventajas:
 
-* **Persistencia real y sin volatilidad:** Evitar las limitaciones y la fragilidad de `localStorage`, cuyos datos pueden perderse al limpiar la caché del navegador o quedar atrapados en un único entorno.
+* **Persistencia real y sin volatilidad:** Evita las limitaciones y la fragilidad de `localStorage`, cuyos datos pueden perderse al limpiar la caché del navegador o quedar atrapados en un único entorno.
+* **Escritura transparente en disco:** Permite guardar cambios automáticamente en segundo plano sin interrumpir el flujo de uso con cuadros de diálogo de permisos o descargas repetidas.
 * **Portabilidad y control total:** Almacenar la información directamente en el sistema de archivos del PC facilita crear copias de seguridad, migrar los datos a otros equipos o editarlos manualmente de forma sencilla.
 * **Simplicidad frente a motores pesados:** Usar un archivo JSON como almacenamiento local ofrece la seguridad de guardar en disco sin la complejidad de configurar e instalar una base de datos tradicional (como MySQL o PostgreSQL).
 
