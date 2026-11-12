@@ -1,48 +1,53 @@
 # 🏋️‍♂️ mi-app-entrenamientos
 
-Aplicación web cliente desarrollada con **HTML, CSS y JavaScript puro (Vanilla)**, diseñada para el uso personal y con fines estrictamente educativos. 
-La app tiene backend montado, únicamente para la recepción de los datos de usuario y posterior guardado en JSON. 
+Aplicación web cliente-servidor desarrollada con **HTML, CSS y JavaScript puro (Vanilla)** y un **backend ligero** para registrar, consultar y analizar métricas personales de entrenamiento.
 
-## 🎯 Propósito del proyecto
-El objetivo principal es construir una herramienta propia para registrar y hacer seguimiento de mis entrenamientos diarios. A través de este desarrollo busco consolidar los fundamentos de la programación web (estructura del DOM, estilos y lógica en el cliente).
+## 🎯 Propósito del Proyecto
 
-## 🤖 Filosofía de desarrollo (Uso de IA)
-Este proyecto sigue una regla de aprendizaje activo: **la Inteligencia Artificial se utiliza únicamente como herramienta de consulta conceptual y resolución de dudas**, evitando la generación automática de código. Todo el código fuente está escrito y comprendido línea por línea por mí. Cabe aclarar que para documentaciones y/o textos si que me va a ayudar como con este README :)
+Además de ser una herramienta útil para llevar el control de mis entrenamientos diarios, este repositorio es un **laboratorio práctico de programación y ciberseguridad**.
 
-## 🛠️ Tecnologías utilizadas
-* **HTML5:** Estructura semántica de la aplicación.
-* **CSS3:** Diseño, maquetación y estilos visuales.
-* **JavaScript (ES6+):** Lógica de negocio, manipulación del DOM y gestión de datos en el navegador.
+El objetivo principal es **cacharrear desde cero con comunicaciones, criptografía y defensa básica** para entender cómo funcionan estas tecnologías por dentro, sin depender de cajas negras ni *frameworks* externos.
 
-## 🚀 Funcionalidades previstas
-* [ ] Formulario para registrar nuevos entrenamientos (ejercicio, series, repeticiones, peso y fecha).
-* [ ] Historial visual de sesiones anteriores.
-* [ ] Persistencia de datos en el servidor.
-* [ ] Filtrado o búsqueda básica por tipo de ejercicio.
+## 🤖 Filosofía de Desarrollo (Uso de IA)
 
-## 🔐 Enfoque y perfil del autor
-Soy estudiante de ingeniería con interés en especializarme en **ciberseguridad**. Aunque esta es una aplicación sencilla ejecutada en el lado del cliente, el desarrollo se aborda prestando atención a buenas prácticas desde la base:
-* Validación y saneamiento básico de las entradas del usuario (prevención conceptual frente a inyecciones como XSS en el DOM).
-* Código limpio, modular y legible.
+Este proyecto sigue una regla estricta de aprendizaje activo: **la Inteligencia Artificial se utiliza únicamente como herramienta de consulta conceptual y revisión de arquitectura**, evitando la generación automática de código. Todo el código fuente está depurado y comprendido línea por línea por mí. Aunque, por el bien de mi cabeza, me ayudará con css y con generación de textos cómo este readme :)
 
-**DISCLAIMER: Estoy discutiendo si hacerla segura de primeras o no. ¿Ventajas/desventajas?**
-* **Si la hago segura, podría ver hasta que punto soy capaz de programar de forma segura, y más adelante hacerle una auditoria para revisarlo.**
-* **Hacerla insegura puede ser interesante para demostrar en un futuro con una auditoria, la mierda que puedes llegar a hacer con IA creyendo que sabes programar, ya que sería evidente los muchos fallos de seguridad que tiene aunque funcione correctamente.** 
+## 🛠️ Stack Tecnológico
 
-## ⚙️ Decisiones de arquitectura y desarrollo
+- **Frontend:** HTML5, CSS3 y JavaScript (ES6+) puro.
+- **Backend:** Servidor ligero dedicado a la autenticación, lógica de negocio y persistencia en archivos JSON (`usuarios.json`, `ejercicios.json`, `sesiones.json`).
 
-### ¿Por qué implementar un backend ligero para persistencia en JSON?
+## 🔐 Laboratorio de Seguridad y Comunicaciones
 
-Aunque la idea inicial era desarrollar una aplicación **100 % *client-side***, finalmente se optó por incorporar un pequeño servidor backend dedicado exclusivamente a gestionar la lectura y escritura de datos en un archivo `.json` local. 
+> **Nota:** En un entorno real de producción se debe utilizar **HTTPS/TLS estándar** y algoritmos probados como *Argon2* o *bcrypt* (*Don't roll your own crypto*). Aquí se implementan de forma artesanal con fines **estrictamente educativos** para comprender su funcionamiento interno.
 
-Si bien el navegador permite escribir archivos directamente en el disco duro desde el cliente (mediante APIs como *File System Access*), este enfoque añade fricción innecesaria por las restricciones de seguridad y la gestión constante de permisos de escritura con el usuario. Delegar esta tarea a un backend ligero resuelve el problema y aporta las siguientes ventajas:
+**Qué estoy implementando para aprender:**
 
-* **Persistencia real y sin volatilidad:** Evita las limitaciones y la fragilidad de `localStorage`, cuyos datos pueden perderse al limpiar la caché del navegador o quedar atrapados en un único entorno.
-* **Escritura transparente en disco:** Permite guardar cambios automáticamente en segundo plano sin interrumpir el flujo de uso con cuadros de diálogo de permisos o descargas repetidas.
-* **Portabilidad y control total:** Almacenar la información directamente en el sistema de archivos del PC facilita crear copias de seguridad, migrar los datos a otros equipos o editarlos manualmente de forma sencilla.
-* **Simplicidad frente a motores pesados:** Usar un archivo JSON como almacenamiento local ofrece la seguridad de guardar en disco sin la complejidad de configurar e instalar una base de datos tradicional (como MySQL o PostgreSQL).
+1. **Simulación de canal seguro sobre HTTP:** Implementación propia de cifrado e intercambio de claves en tránsito para entender cómo proteger datos frente a *sniffing* en la red (y documentar por qué sigue siendo vulnerable a ataques *Man-in-the-Middle* sin certificados reales).
+2. **Hashing artesanal con *Salt*:** Construcción de una función resumen propia para interiorizar el efecto avalancha y el almacenamiento seguro de contraseñas.
+3. **Hardening básico del servidor y cliente:**
+   - Validación y saneamiento de entradas en cliente y servidor (prevención de XSS e inyecciones en JSON).
+   - Gestión de sesiones segura (cookies `HttpOnly` / `SameSite=Strict`).
+   - Protección básica frente a fuerza bruta en el login y control de acceso a los archivos de datos.
+
+## 🚀 Funcionalidades
+
+- [ ] Sistema de login con protocolo de comunicación cifrada propio.
+- [ ] Registro de entrenamientos (ejercicio, series, repeticiones, peso y fecha).
+- [ ] Historial visual y filtrado por tipo de ejercicio.
+- [ ] Persistencia en backend mediante archivos JSON locales.
+- [ ] Notas finales de auditoría (probando a romper mi propia app).
+
+## 📂 Documentación del Proyecto
+
+Para priorizar el código sin perder el hilo de las decisiones técnicas, la documentación se mantiene ligera en dos archivos:
+
+- 📄 **[Diario de Desarrollo (`DEVLOG.md`)](DEVLOG.md):** Registro rápido por sesiones con los avances, bloqueos y decisiones tomadas sobre la marcha.
+- 🛡️ **[Notas de Diseño y Seguridad (`docs/NOTAS_SEGURIDAD.md`)](docs/NOTAS_SEGURIDAD.md):** Explicación técnica de mi protocolo artesanal, el algoritmo de hash, sus limitaciones conocidas y las pruebas de auditoría.
 
 ## 💻 Cómo ejecutar el proyecto
-Al ser una aplicación web estática sin dependencias externas, no requiere instalación:
-1. Clona o descarga este repositorio.
-2. Abre el archivo `index.html` directamente en cualquier navegador web moderno.
+
+1. Clona este repositorio (`git clone https://github.com/tu-usuario/mi-app-entrenamientos.git`) y entra en la carpeta.
+2. Configura las variables de entorno copiando `.env.example` a `.env`.
+3. Arranca el servidor backend.
+4. Abre `http://localhost:<PUERTO>` en tu navegador.
