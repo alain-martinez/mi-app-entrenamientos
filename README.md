@@ -8,6 +8,8 @@ Además de ser una herramienta útil para llevar el control de mis entrenamiento
 
 El objetivo principal es **cacharrear desde cero con comunicaciones, criptografía y defensa básica** para entender cómo funcionan estas tecnologías por dentro, sin depender de cajas negras ni *frameworks* externos.
 
+**DISCLAIMER: Antes de criticar este proyecto, recalco que es un proyecto 4fun y que no me pagan por ello, es un mero pasatiempos :)**
+
 ## 🤖 Filosofía de Desarrollo (Uso de IA)
 
 Este proyecto sigue una regla estricta de aprendizaje activo: **la Inteligencia Artificial se utiliza únicamente como herramienta de consulta conceptual y revisión de arquitectura**, evitando la generación automática de código. Todo el código fuente está depurado y comprendido línea por línea por mí. Aunque, por el bien de mi cabeza, me ayudará con css y con generación de textos cómo este readme :)
