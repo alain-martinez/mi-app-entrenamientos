@@ -1,0 +1,10 @@
+[
+  {
+    "nombre": "Alain",
+    "apellido": "Martínez",
+    "edad": 22,
+    "pesoKg": 74,
+    "alturaCm": 184,
+    "porcentajeGrasa": 16
+  }
+]

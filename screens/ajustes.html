@@ -20,17 +20,15 @@
                 <h2>Iniciar / Cambiar Sesión</h2>
                 <div class="tarjeta-formulario">
                     <div class="row">
-                        <label for="select-usuarios-registrados">Seleccionar usuario existente
-                        <select id="select-usuarios-registrados">
-                            <option value="">-- Seleccionar de la lista --</option>
-                        </select>
-                        </label>
-                        <button class="btn2" id="btn-iniciar-sesion" style="align-self: flex-end; margin-bottom: 2px;">
+                    <label for="input-buscar-usuario">Nombre de usuario
+                        <input id="input-buscar-usuario" type="text" placeholder="Ej. Alain">
+                    </label>
+                    <button class="btn2" id="btn-iniciar-sesion">
                         Cargar sesión
-                        </button>
+                    </button>
                     </div>
-                    <p class="texto-secundario" style="margin-top: 10px;">
-                        Selecciona un usuario de la lista de <code>usuarios.json</code> o introduce Nombre y Apellido abajo para iniciarlo.
+                    <p id="mensaje-estado-sesion" class="texto-secundario">
+                        Introduce tu nombre de usuario para cargar tu perfil desde el servidor.
                     </p>
                 </div>
 
@@ -74,6 +72,10 @@
                     <button class="btn" id="btn-guardar-usuario" style="margin-top: 16px;">
                     Guardar cambios de usuario
                     </button>
+
+                    <p id="mensaje-datos-personales" class="texto-secundario">
+                        Introduce tus datos para crear/actualizar tu usuario en el servidor.
+                    </p>
                 </div>
 
                 <!-- Datos -->
@@ -81,25 +83,37 @@
 
                 <div class="tarjeta-formulario">
                     <h3>1. Base de datos de Usuarios (usuarios.json)</h3>
-                    <p class="texto-secundario" id="info-almacenamiento-usuarios" style="margin: 8px 0 12px;">
-                    Comprobando estado del archivo usuarios.json...
-                    </p>
                     <div class="row">
                     <button class="btn2" id="btn-descargar-json-usuarios">Descargar</button>
                     </div>
+                    <p id="mensaje-descargar-usuarios" class="texto-secundario">
+                        Introduce tus datos para crear/actualizar tu usuario en el servidor.
+                    </p>
                 </div>
 
                 <div class="tarjeta-formulario">
                     <h3>2. Historial de Sesiones (sesiones.json)</h3>
-                    <p class="texto-secundario" id="info-almacenamiento-sesiones" style="margin: 8px 0 12px;">
-                    Comprobando estado del archivo sesiones.json...
-                    </p>
                     <div class="row">
                     <button class="btn2" id="btn-descargar-json-sesiones">Descargar</button>
                     </div>
+                    <p id="mensaje-descargar-sesiones" class="texto-secundario">
+                        Introduce tus datos para crear/actualizar tu usuario en el servidor.
+                    </p>
                 </div>
 
             </section>
         </main>
+
+        <nav aria-label="Navegación principal">
+            <div id="nav">
+            <button data-t="ini">Inicio</button>
+            <button data-t="reg">Registrar entrenamiento</button>
+            <button data-t="ent">Entrenamientos</button>
+            <button data-t="ajus" aria-current="true">Ajustes</button>
+            </div>
+        </nav>
+
+        <script src="../scripts/ajustes.js"></script>
+
     </body>
 </html>
