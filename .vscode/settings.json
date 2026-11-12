@@ -1,0 +1,10 @@
+// Esta carpeta .vscode y el setting de liveServer ha sido creado porque si en el server se modificaba algo, live server 
+// creía que había cambiado algo en el cliente ya que comparten root, y se actualizaba sin llegar a terminar de ejecutarse 
+// los comandos.
+{
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "backend/**",
+    "**/*.json"
+  ]
+}

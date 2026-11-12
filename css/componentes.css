@@ -60,6 +60,49 @@
   font-size: 14px;
 }
 
+/*Ajustes*/
+.tarjeta-formulario {
+  background: var(--cd);
+  border: 1px solid var(--ln);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.caja-calculos {
+  margin-top: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.row > label {
+  flex: 1 1 120px;
+}
+
+.row > .btn2 {
+  flex: 1 1 140px;
+}
+
+#mensaje-estado-sesion, #mensaje-datos-personales, #mensaje-descargar-sesiones, #mensaje-descargar-usuarios {
+  margin-top: 10px;
+}
+
+/*Forms e inputs*/
+input, select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 9px 10px;
+  background: var(--cd);
+  color: var(--fg);
+  border: 1px solid var(--ln);
+  border-radius: 8px;
+  font: inherit;
+}
+
 /* Call to action */
 .cta-container {
   margin-top: 32px;
@@ -86,8 +129,77 @@
   cursor: pointer;
 }
 
+.btn2 {
+  padding: 9px 12px;
+  border: 1px solid var(--ln);
+  border-radius: 8px;
+  background: var(--cd);
+  color: var(--fg);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#btn-iniciar-sesion {
+  align-self: flex-end; 
+  margin-bottom: 0px;
+}
+
 /* Tipografía de utilidad */
 .p-suave {
   color: var(--mu);
   font-size: 13px;
+}
+
+.texto-secundario {
+  color: var(--mu);
+  font-size: 13px;
+  margin: 0;
+}
+
+#info-usuario-activo {
+    font-weight: 600;
+    color: var(--ac);
+    margin-bottom: 16px;
+}
+
+.sec[hidden] {
+  display: none;
+}
+
+/* Navegación */
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg);
+  border-top: 1px solid var(--ln);
+  display: flex;
+  justify-content: center;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+nav div {
+  display: flex;
+  max-width: 560px;
+  width: 100%;
+}
+
+nav button {
+  flex: 1;
+  background: none;
+  border: 0;
+  color: var(--mu);
+  font: inherit;
+  font-size: 13px;
+  padding: 14px 4px;
+  cursor: pointer;
+}
+
+nav button[aria-current="true"] {
+  color: var(--fg);
+  font-weight: 600;
+  box-shadow: inset 0 2px 0 var(--ac);
 }
