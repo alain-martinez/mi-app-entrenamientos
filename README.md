@@ -24,6 +24,10 @@ Este proyecto sigue una regla de aprendizaje activo: **la Inteligencia Artificia
 Soy estudiante de ingeniería con interés en especializarme en **ciberseguridad**. Aunque esta es una aplicación sencilla ejecutada en el lado del cliente, el desarrollo se aborda prestando atención a buenas prácticas desde la base:
 * Validación y saneamiento básico de las entradas del usuario (prevención conceptual frente a inyecciones como XSS en el DOM).
 * Código limpio, modular y legible.
+**DISCLAIMER: Estoy discutiendo si hacerla segura de primeras o no. ¿Ventajas/desventajas?
+* Si la hago segura, podría ver hasta que punto soy capaz de programar de forma segura, y más adelante hacerle una auditoria para revisarlo.
+* Hacerla insegura puede ser interesante para demostrar en un futuro con una auditoria, la mierda que puedes llegar a hacer con IA creyendo que sabes programar, ya que sería evidente los muchos fallos de seguridad que tiene aunque funcione correctamente. 
+  **
 
 ## ⚙️ Decisiones de arquitectura y desarrollo
 
