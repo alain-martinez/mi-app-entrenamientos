@@ -8,7 +8,7 @@ Además de ser una herramienta útil para llevar el control de mis entrenamiento
 
 El objetivo principal es **cacharrear desde cero con comunicaciones, criptografía y defensa básica** para entender cómo funcionan estas tecnologías por dentro, sin depender de cajas negras ni *frameworks* externos.
 
-**DISCLAIMER: Antes de criticar este proyecto, recalco que es un proyecto 4fun y que no me pagan por ello, es un mero pasatiempos :)**
+**DISCLAIMER: Antes de criticar este proyecto, recalco que es un proyecto 4fun y que no me pagan por ello, es puro entretenimiento :)**
 
 ## 🤖 Filosofía de Desarrollo (Uso de IA)
 
