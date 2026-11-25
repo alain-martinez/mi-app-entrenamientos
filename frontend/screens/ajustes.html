@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Ajustes</title>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="stylesheet" href="../css/componentes.css">
+    </head>
+    <body>
+        <main>
+            <h1 id="titulo-pantalla">Ajustes</h1>
+
+            <div id="info-usuario-activo" class="texto-secundario">
+                Sesión para: Sin usuario seleccionado.
+            </div>
+
+            <!-- Iniciar / Cambiar Sesión -->
+            <section class="sec" id="seccion-ajustes">
+                <h2>Iniciar / Cambiar Sesión</h2>
+                <div class="tarjeta-formulario">
+                    <div class="row">
+                    <label for="input-buscar-usuario">Nombre de usuario
+                        <input id="input-buscar-usuario" type="text" placeholder="Ej. Alain">
+                    </label>
+                    <button class="btn2" id="btn-iniciar-sesion">
+                        Cargar sesión
+                    </button>
+                    </div>
+                    <p id="mensaje-estado-sesion" class="texto-secundario">
+                        Introduce tu nombre de usuario para cargar tu perfil desde el servidor.
+                    </p>
+                </div>
+
+                <!-- Datos Personales -->
+                <h2>Datos Personales</h2>
+                <div class="tarjeta-formulario">
+                    <div class="row">
+                        <label for="input-nombre">Nombre
+                            <input id="input-nombre" type="text" placeholder="Ej. Juan">
+                        </label>
+                        <label for="input-apellido">Apellido
+                            <input id="input-apellido" type="text" placeholder="Ej. Pérez">
+                        </label>
+                    </div>
+
+                    <div class="row" style="margin-top: 12px;">
+                        <label for="input-edad">Edad (años)
+                            <input id="input-edad" type="number" min="1" max="120" placeholder="Ej. 28" inputmode="numeric">
+                        </label>
+                        <label for="input-peso">Peso (kg)
+                            <input id="input-peso" type="number" step="0.1" placeholder="Ej. 75" inputmode="decimal">
+                        </label>
+                    </div>
+
+                    <div class="row" style="margin-top: 12px;">
+                        <label for="input-altura">Altura (cm)
+                            <input id="input-altura" type="number" placeholder="Ej. 175" inputmode="numeric">
+                        </label>
+                        <label for="input-grasa">% Grasa aprox.
+                            <input id="input-grasa" type="number" step="0.1" placeholder="Ej. 18.5" inputmode="decimal">
+                        </label>
+                    </div>
+
+                    <!-- Métricas calculadas -->
+                    <div class="caja-calculos">
+                    <p class="texto-secundario" id="info-imc">IMC: --</p>
+                    <p class="texto-secundario" id="info-bmr" style="margin-top: 4px;">Metabolismo Basal (BMR): -- kcal/día</p>
+                    <p class="texto-secundario" id="info-lbm" style="margin-top: 4px;">Masa Magra Estimada: -- kg</p>
+                    </div>
+
+                    <button class="btn" id="btn-guardar-usuario" style="margin-top: 16px;">
+                    Guardar cambios de usuario
+                    </button>
+
+                    <p id="mensaje-datos-personales" class="texto-secundario">
+                        Introduce tus datos para crear/actualizar tu usuario en el servidor.
+                    </p>
+                </div>
+
+                <!-- Datos -->
+                <h2>Archivos JSON</h2>
+
+                <div class="tarjeta-formulario">
+                    <h3>1. Base de datos de Usuarios (usuarios.json)</h3>
+                    <div class="row">
+                    <button class="btn2" id="btn-descargar-json-usuarios">Descargar</button>
+                    </div>
+                    <p id="mensaje-descargar-usuarios" class="texto-secundario">
+                        Introduce tus datos para crear/actualizar tu usuario en el servidor.
+                    </p>
+                </div>
+
+                <div class="tarjeta-formulario">
+                    <h3>2. Historial de Sesiones (sesiones.json)</h3>
+                    <div class="row">
+                    <button class="btn2" id="btn-descargar-json-sesiones">Descargar</button>
+                    </div>
+                    <p id="mensaje-descargar-sesiones" class="texto-secundario">
+                        Introduce tus datos para crear/actualizar tu usuario en el servidor.
+                    </p>
+                </div>
+
+            </section>
+        </main>
+
+        <nav aria-label="Navegación principal">
+            <div id="nav">
+            <button data-t="ini">Inicio</button>
+            <button data-t="reg">Registrar entrenamiento</button>
+            <button data-t="ent">Entrenamientos</button>
+            <button data-t="ajus" aria-current="true">Ajustes</button>
+            </div>
+        </nav>
+
+        <script src="../scripts/ajustes.js"></script>
+
+    </body>
+</html>
