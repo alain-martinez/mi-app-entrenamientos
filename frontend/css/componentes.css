@@ -67,7 +67,60 @@
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
+
+/*Login*/
+.tarjeta-formulario-login {
+  background: var(--cd);
+  border: 1px solid var(--ln);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tarjeta-formulario-login #btn-iniciar-sesion,
+.tarjeta-formulario-login #btn-registrarse {
+  align-self: center;
+  width: 100%;
+  margin-top: 4px; 
+  font: inherit;
+  font-weight: 600;
+}
+
+.tarjeta-formulario-login #btn-iniciar-sesion {
+  margin-top: 4px;
+  width: 100%;
+  padding: 11px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--fg);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+.texto-error {
+  color: #f87171;
+  background-color: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Oculta el recuadro por completo mientras el <p> esté vacío */
+.texto-error:empty {
+  display: none;
+}
+
+/*FIN Login*/
 
 .caja-calculos {
   margin-top: 16px;
