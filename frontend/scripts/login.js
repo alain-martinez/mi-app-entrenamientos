@@ -33,7 +33,7 @@ const inputUsuario = document.getElementById("input-nombre-usuario");
 const inputContrasena = document.getElementById("input-contrasena-usuario");
 const mensajeError = document.getElementById("mensaje-error");
 
-/* Frases motivadoras */ 
+/* Frase motivadora */ 
 document.addEventListener("DOMContentLoaded", () => {
   const elementoFrase = document.getElementById("frase-motivadora");
   
