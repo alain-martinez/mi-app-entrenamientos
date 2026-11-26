@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* Inicio sesion */
-btnIniciarSesion.addEventListener("click", (evento) => {
+btnIniciarSesion.addEventListener("click", () => {
   let respuestaValidacion = validarCredencialesLogin(inputUsuario.value, inputContrasena.value);
 
   if (respuestaValidacion != null) { mensajeError.textContent = respuestaValidacion; } 

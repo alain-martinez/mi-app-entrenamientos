@@ -122,6 +122,36 @@
 
 /*FIN Login*/
 
+/* Register */
+.tarjeta-formulario-register {
+  background: var(--cd);
+  border: 1px solid var(--ln);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tarjeta-formulario-register #btn-crear-cuenta,
+.tarjeta-formulario-register #btn-volver-login {
+  width: 100%;
+  margin-top: 4px;
+  font: inherit;
+  font-weight: 600;
+}
+
+.tarjeta-formulario-register #btn-crear-cuenta {
+  padding: 11px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* FIN Register */
+
 .caja-calculos {
   margin-top: 16px;
 }
